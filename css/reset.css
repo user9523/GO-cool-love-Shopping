@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+body,html,h1,h2,h3,h4,h5,h6,p,span,a,img,ul,dl,dt,dd,ol,li,input,textarea,iframe,form,table,tr{padding:0; margin:0;}
+img{border:none;}
+ul li,ol li,li{list-style:none;}
+input{outline:none;}
+a{text-decoration:none;cursor:pointer;color:#333}
+a:hover{color:red;}
+i,em{font-style:normal;}
+strong,h1,h2,h3,h4,h6{font-weight:normal;}
+body{font:12px/1.5 Verdana, simsun, Sans-Serif;color: #333;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix:after{content:"";display:block; visibility:hidden;clear:both; height:0; font-size:0; overflow:hidden;}.main{width:1000px; margin:0 auto;}
+.noborder{border:none;}
+.container{width:1190px;margin:0 auto;}
+/* ------头-------------- */
+.gwc_top{
+    height: 72px;
+    padding: 10px 0;
+    line-height: 72px;
+    text-align: right;
+    background: #fff;
+    border-bottom: 3px solid #eee;
+}
+.gwc_top .right{
+    text-align: right;
+}
+.gwc_top .right a{
+    color: #333;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.gwc_top .right a:hover{
+    color: red;
+}
+.gwc_top .right .phone .ico1{
+    width: 16px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    right: 1px;
+    /* background: red; */
+    background: url(../images/icon.gif) no-repeat -23px -30px;
+}
+/*-------------- 尾 ---------------*/
+.foot {
+    margin-top: 20px;
+    border-top: 4px solid #bbbbbb;
+    padding-top: 6px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    width: 1200px;
+}
+.foot .info {
+padding-top: 34px;
+margin: 0 auto;
+}
+.foot .info dl {
+float: left;
+text-align: left;
+min-height: 176px;
+width: 235px;
+list-style-type: disc ;
+}
+.foot .info dl dt {
+font-size: 14px;
+font-weight: 600;
+}
+.foot .info dl dd{
+line-height: 25px;
+font-size: 12px;
+background: url(../images/list_dott.gif) no-repeat scroll 20px center rgba(0, 0, 0, 0);
+padding: 0 8px;
+}
+.foot .info a {
+padding: 0 20px;
+}
+.foot .phone {
+padding-top: 10px;
+width: 100%;
+float: left;
+}
+.foot .copyright {
+padding-top: 5px;
+width: 100%;
+float: left;
+}
+.foot .copyright {
+padding-top: 5px;
+width: 100%;
+float: left;
+}
+.fix-rr {
+    width: 66px;
+    position: fixed;
+    right: 0px;
+    top: 200px;
+    z-index: 889;
+}
+.fix-rr .wb {
+    height: 71px;
+    line-height: 99em;
+    overflow: hidden;
+    cursor: pointer;
+    height: 70px;
+    width: 66px;
+    background: url(../images/slidepic.jpg) no-repeat;
+    background-position: 0 0;
+    position: relative;
+}
+.fix-rr .fixclose {
+    display: none;
+}
+.fix-rr .wb2 {
+    cursor: pointer;
+    height: 70px;
+    width: 66px;
+    background: url(../images/slidepic.jpg) no-repeat;
+    position: relative;
+    background-position: 0 -134px;
+}
+.fix-rr .wb2 .weixin{
+    display: none;
+    cursor: pointer;
+    height: 70px;
+    width: 66px;
+    position: relative;
+}
+.fix-rr .wb2 .weixin:hover{
+    position: absolute;
+    display: block;
+    top: 50px;
+    right: 50px;
+}
+.fix-rr .wb1{
+    background-position: 0 -71px;
+    height: 63px;
+    cursor: pointer;
+    height: 70px;
+    width: 66px;
+    background: url(../images/slidepic.jpg) no-repeat;
+    position: relative;
+}
+.fix-rr .wb3 {
+    cursor: pointer;
+    height: 70px;
+    width: 66px;
+    background: url(../images/slidepic.jpg) no-repeat;
+    position: relative;
+    background-position: 0 -200px;
+}
+.fix-rr .wb:hover{
+    background: url(../images/slidepic.jpg) no-repeat;
+    position: relative;
+    background-position: -66px 0px;
+}
+.fix-rr .wb2:hover{
+    background: url(../images/slidepic.jpg) no-repeat;
+    position: relative;
+    background-position: -66px -134px;
+}
+.fix-rr .wb3:hover{
+    background: url(../images/slidepic.jpg) no-repeat;
+    position: relative;
+    background-position: -66px -200px;
+}

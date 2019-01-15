@@ -1,0 +1,8 @@
+数据库名字：coolgo
+表名： login;
+
+id 自增
+
+name
+
+pwd

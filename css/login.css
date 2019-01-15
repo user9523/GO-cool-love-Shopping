@@ -1,0 +1,90 @@
+body{
+    background: #f4f3f3;
+}
+.userlogin {
+    width: 1190px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 60px auto;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+.userlogin .left{
+    width: 658px;
+    padding: 10px;
+}
+.userlogin .left img{
+    width: 658px;
+    height: 395px;
+}
+.userlogin .right {
+    width: 415px;
+    margin-right: 45px;
+    text-align: left;
+}
+.userlogin .right h1{
+    text-align: center;
+    font-size: 30px;
+    color: #999;
+    line-height: 40px;
+    padding: 25px 0 25px 0;
+    border-bottom: 1px dashed #d3d3d3;
+    margin-bottom: 25px;
+}
+
+ .userlogin dl {
+    margin-top: 30px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    height: 50px;
+} 
+.userlogin dl dd{
+
+    margin-left: 58px;
+    color: #999;
+}
+.userlogin dl dd input{
+    border: none;
+        height: 40px;
+        padding: 5px;
+        width: 340px;
+        color: #999;
+        font-size: 12px;
+}
+.userlogin dl dt {
+    float: left;
+    display: inline;
+    overflow: hidden;
+    width: 53px;
+    height: 50px;
+}
+.userlogin dl .imob {
+    background: url(../images/phone.jpg) no-repeat right center;
+}
+.userlogin dl .ipas {
+    background: url(../images/suo.jpg) no-repeat right center;
+}
+.userlogin .isub {
+    width: 138px;
+    height: 38px;
+    text-align: center;
+    background: #c00017;
+    color: #fff;
+    border: 1px solid #9a000c;
+    font-size: 18px;
+    cursor: pointer;
+}
+#login{
+    margin-left: 4px;
+    margin-top: 30px;
+}
+.userlogin .tip {
+    border-top: 1px dashed #d3d3d3;
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: right;
+    color: #999;
+    font-size: 12px;
+}

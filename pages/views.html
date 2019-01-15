@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<style>
+		li{
+	list-style: none;
+	}
+.top{
+    height: 29px;
+    background: rgb(216, 215, 215);
+    line-height: 29px;
+}
+	.top .ico1{
+    width: 16px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    right: 1px;
+    /* background: red; */
+    background: url(../images/icon.gif) no-repeat -23px -30px;
+}
+.header{height:120px;}
+.header .logo{ width: 189px; height: 66px; margin-top: 21px; float: left;}
+.header .header_search{margin-top:29px;width:560px;float:right;}
+.header .logo img{
+    float: left;
+}
+#searchinp{background: none;
+  border: 2px solid #c00017; 
+  width: 426px; color: #888;
+    line-height: 37px;  
+    height: 36px; 
+    float: left; 
+    font-size: 16px; 
+    padding-left: 10px;}
+#searchbtn{
+    background-color:  #c00017;
+    color: #fff;
+    border: none; width: 120px;  
+    height: 40px; 
+     overflow: hidden;
+      display: inline-block;
+      cursor: pointer;}
+.hotgoods{margin-top:12px;}
+.hotgoods a{color:#c00017;margin-right:13px;}
+.hotgoods a:hover,.hotgoods a.baby_c:hover{text-decoration: underline;}
+.hotgoods a.baby_c{color:#888;}
+.breadcrumb {
+    text-align: left;
+    height: 52px;
+    border-bottom: 1px solid #dadada;
+    line-height: 52px;
+	color: #999;
+}
+.page {
+    padding-top: 20px;
+    text-align: left;
+	line-height: 22px;
+}
+.page .left {
+	width: 540px;
+}
+.page .pic {
+    width: 440px;
+    float: left;
+	display: inline;
+	height: 470px;
+    display: block;
+}
+.page .picl {
+    width: 90px;
+    margin-left: 450px;
+}
+.page .pic img{
+		width: 440px;
+		height: 440px;
+		float: left;
+}
+
+
+.page_comt {
+    width: 175px;
+    position: absolute;
+    top: 15px;
+    right: 0;
+	text-align: left;
+	top: 0px;
+    position: static;
+    float: right;
+}
+.page_comt .topsign ul {
+    width: 105%;
+    height: 57px;
+	padding-bottom: 20px;
+}
+.page_comt .topsign li {
+    width: 58px;
+    float: left;
+    display: inline;
+    font-family: "\5FAE\8F6F\96C5\9ED1","\5B8B\4F53";
+    font-size: 12px;
+    color: #999;
+	text-align: center;
+}
+.page_comt .topsign li:first-child .img {
+    width: 35px;
+    height: 33px;
+    overflow: hidden;
+	background: url(../images/a1.jpg) no-repeat;
+	background-position: 0px 0px;
+	margin: 5px auto;
+}
+.page_comt .topsign li:nth-child(2) .img2{
+	width: 35px;
+    height: 33px;
+    overflow: hidden;
+	background: url(../images/a1.jpg) no-repeat;
+	background-position: 0px -34px;
+	margin: 5px auto;
+}
+.page_comt .topsign li:last-child .img {
+    width: 35px;
+    height: 33px;
+    overflow: hidden;
+	background: url(../images/a1.jpg) no-repeat;
+	background-position: 0px -68px;
+	margin: 5px auto;
+}
+.attribute h1 {
+    font-size: 18px;
+    color: #000;
+    line-height: 24px;
+    margin-top: -3px;
+}
+.attribute p {
+    font-size: 14px;
+    color: #999;
+    padding: 10px 0;
+    border-bottom: 1px dotted #d4d4d4;
+    margin-bottom: 5px;
+}
+.attribute dl {
+    padding-top: 7px;
+    text-align: left;
+    color: #999;
+    font-size: 12px;
+}
+.attribute dt {
+    float: left;
+    display: inline;
+    width: 70px;
+
+}
+.attribute dd{
+    margin-left: 70px;
+    color: #333;
+}
+.attribute .btns{
+	padding-top: 40px;
+}
+.attribute .btns a.btn-sc {
+    background: #f5f5f5;
+    color: #6a6a6a;}
+.attribute .btns a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 136px;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #d4d4d4;
+}
+.sa_star_1 {
+background: url(../images/stars.gif) no-repeat scroll 347px 300px transparent;
+}
+.sa_star_1 {
+    background-position: -65px -265px;
+    width: 64px;
+    height: 15px;
+    display: block;
+}
+.attribute dd em.tp1 {
+    color: #333;
+    font-size: 12px;
+    width: 22px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #d4d4d4;
+    margin-right: 5px;
+    vertical-align: middle;
+	cursor: pointer;
+}
+.attribute dd em.tp2 {
+    color: #333;
+    font-size: 12px;
+    width: 22px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #d4d4d4;
+    margin-right: 5px;
+    vertical-align: middle;
+	cursor: pointer;
+}
+.attribute dd .count {
+    height: 24px;
+    width: 42px;
+    border: 1px solid #d4d4d4;
+    margin-right: 5px;
+	text-align: center;
+}
+#filter {
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				background: deepskyblue;
+				opacity: 0.5;
+				left: 0;
+				top: 0;
+				display: none;
+			}		
+#box {
+		position: relative;
+		width: 440px;
+		height: 440px;
+		}
+			
+#max {
+				position: absolute;
+				left: 566px;
+				top: 202px;
+				overflow: hidden;
+				width: 400px;
+				height: 400px;
+				display: none;
+			}
+#maxImg {
+				width: 800px;
+				height: 800px;
+				position: absolute;
+				display: none;
+			}
+.bgr {
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 20px;
+	background: #9a000c; 
+    text-align: center;
+	position: relative;
+	margin-left:300px;
+		}
+.number {
+    position: absolute;
+    top: 3px;
+    right: 65px;
+    font-size: 12px;
+    font-family: "Arial";
+    background: #c00017;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 0 5px;
+    height: 15px;
+    color: #fff;
+	line-height: 15px
+}
+.bgr .simg {
+    background: url(../images/icon.gif) no-repeat 0 -99px;
+    width: 21px;
+    height: 20px;
+    margin-right: 20px;
+    display: inline-block;
+	vertical-align: middle
+}
+	</style>
+</head>
+
+<body>
+	<!-- 顶部 -->
+	<div class="top">
+		<div class="topwap container">
+			<div class="welcome fl">您好，欢迎光临GO购爱！
+				<span>南京站</span>|
+				<a href="#">加入收藏</a>
+			</div>
+			<div class="welcome fr">
+				<a href="pages/login.html">登录</a>|
+				<a href="pages/register.html">免费注册</a>
+				<span class="ico1"> <i></i></span>
+				13340002533
+			</div>
+		</div>
+	</div>
+	<!-- 头部 -->
+	<div class="header container">
+		<a class="logo" href="../index.html"><img src="../picture/logo.png"></a>
+		<div class="header_search">
+			<form method="get" action="">
+				<div class="searchbox">
+					<input type="text" id="searchinp" placeholder="请输入商品名称" />
+					<input type="submit" id="searchbtn" value="搜 索" />
+				</div>
+			</form>
+			<p class="hotgoods">
+				热门搜索：
+				<a href="##">美食</a>
+				<a href="##" class="baby_c">零食</a>
+				<a href="##">精美礼盒</a></p>
+		</div>
+	</div>
+	<!-- 中间详情 -->
+	<div class="breadcrumb container">
+		<a href="http://www.gogouai.com/">首页</a><span id="breadcrumbCategory">&nbsp;&gt;&nbsp;<a href="http://www.gogouai.com/cat_10.html"
+			 target="_blank"><em class="tp3"></em>&nbsp;&nbsp;时令水果<span style="font-size:12px;float:right;color:#666;margin-right:8px;">更多»</span></a>&nbsp;&gt;&nbsp;<a
+			 href="http://www.gogouai.com/cat_1002.html" target="_blank">国产水果</a></span>&nbsp;&gt;&nbsp;<a href="http://www.gogouai.com/goods/index/1002">国产水果</a>&nbsp;&gt;&nbsp;<a
+		 href="">红心柚</a>
+	</div>
+	<div class="page container" style="position:static">
+		<div class="left fl" style="display:block;">
+			<div class="pic" style="height:470px;display:block;">
+				<li id="box"><img src="../img/1000img01.jpg" alt="红心柚" class="curr_image" style="width:440px;height:440px;float:left;">
+					<div id="filter"></div>
+				</li>
+				<div style="clear:both;"></div>
+				<div class="zf">
+					<p>商品编号：<em>100200000074</em>&nbsp;&nbsp;|&nbsp;&nbsp;分享：</p>
+					<div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1546950889961"><a href="#" class="bds_more"
+						 data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone"
+						 data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#"
+						 class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a
+						 href="#" class="bds_tqf" data-cmd="tqf" title="分享到腾讯朋友"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>
+				</div>
+			</div>
+			<div id="max">
+				<img src="../images/max10001.jpg" id="maxImg">
+			</div>
+			<div class="picl" style="height:480px;overflow:hidden;">
+				<a class="top hidden" href="javascript:;" id="thumb_prev" style="display: none;">∧</a>
+				<div class="caroufredsel_wrapper" style="display: block; text-align: left; float: none; position: static; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 90px; height: 400px; margin: 0px; overflow: hidden;">
+					<ul id="thumb_list" style="position: static; text-align: left; float: none; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; height: 1200px; width: 90px;">
+						<li class="item min"><a href="javascript:;"><img src="../img/1000img01.jpg" style="width:90px;height:90px;"></a></li>
+						<li class="item"><a href="javascript:;"><img src="../images/you1.jpg" style="width:90px;height:90px;"></a></li>
+						<li class="item"><a href="javascript:;"><img src="../images/you2.jpg" style="width:90px;height:90px;"></a></li>
+						<li class="item"><a href="javascript:;"><img src="../images/you3.jpg" style="width:90px;height:90px;"></a></li>
+					</ul>
+				</div>
+				<a class="bottom hidden" href="javascript:;" id="thumb_next" style="display: none;">∨</a>
+			</div>
+		</div>
+		<div class="attribute" style="width:400px;overflow:hidden;margin-left:10px;float:left;">
+			<h1 style="width:100%;">红心柚</h1>
+			<p></p>
+			<dl class="clearfix"><dt>规　　格：</dt>
+				<dd>3g</dd>
+			</dl>
+			<dl class="clearfix"><dt>GO购爱价：</dt>
+				<dd>￥<em class="price">17.00</em></dd>
+			</dl>
+			<dl class="clearfix"><dt>商品评论：</dt>
+				<dd><a href="javascript:void(0);" id="showComment">查看评论</a></dd>
+			</dl>
+			<dl class="clearfix"><dt>商品品牌：</dt>
+				<dd></dd>
+			</dl>
+			<!--  <dl class="clearfix"><dt>促销信息：</dt><dd>单笔订单实付金额满29元免运费</dd> -->
+
+
+
+			<div id="infos" style="display:none">
+			</div>
+			<dl class="clearfix">
+				<dt>配送时间：</dt>
+				<dd>每天16:00前下单，次日自提，非工作日自动顺延</dd>
+			</dl>
+			<dl class="clearfix">
+				<dt>购买数量：</dt>
+				<dd>
+					<em class="tp1">-</em>
+					<input type="text" class="count" value="1">
+					<em class="tp2">+</em>
+				</dd>
+			</dl>
+			<div class="btns clearfix">
+				<div class="bgr">
+					<div class="number" id="cart_number">0</div>
+					<span class="simg"></span>购物车
+				</div>
+				<a class="btn-sc sc1" href="javascript:;">查看购物车</a>
+				<a class="btn-sc sc2" href="javascript:;">加入购物车</a>
+			</div>
+
+
+
+		</div>
+		<!--add-->
+		<div class=" page_comt" style="top:0px;position:static;float:right;">
+			<div class="topsign clearfix" style="width:100%;">
+				<ul>
+					<li>
+						<div class="img img1"></div>健康卫生
+					</li>
+					<li>
+						<div class="img2"></div>正品保障
+					</li>
+					<li>
+						<div class="img img3"></div>售后无忧
+					</li>
+				</ul>
+			</div>
+			<div class="center_comt" style="padding: 7px 10px;">
+				<div class="comt_img">
+					<img src="../images/weima.jpg" alt="">
+				</div>
+				<p>
+					<span style="float:left;">评分：</span>
+					<span style="float:left;margin-top:5px;" class="sa_star_1"><i class="sa_d0"></i></span>
+					<em style="float:left;">&nbsp;0%</em>
+				</p>
+				<p style="clear:both;"></p>
+				<p><em>0条评论</em></p>
+			</div>
+		</div>
+		<!--add-->
+
+	</div>
+	<!-- 底部
+	<div class="foot container">
+		<div class="footerwap">
+			<div class="info">
+				<dl>
+					<dt><a href="#" target="_blank">购物指南</a></dt>
+					<dd><a href="#" target="_blank">会员注册协议</a></dd>
+					<dd><a href="#" target="_blank">会员购物流程</a></dd>
+					<dd><a href="#" target="_blank">会员积分说明</a></dd>
+					<dd><a href="#" target="_blank">配送范围及运费</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="#" target="_blank">支付帮助</a></dt>
+					<dd><a href="#" target="_blank">会员卡密码修改</a></dd>
+					<dd><a href="#" target="_blank">会员卡使用说明</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="#" target="_blank">售后服务</a></dt>
+					<dd><a href="#" target="_blank">货到付款</a></dd>
+					<dd><a href="#" target="_blank">售后服务</a></dd>
+					<dd><a href="#" target="_blank">退换货说明</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="#" target="_blank">GO购爱信息</a></dt>
+					<dd><a href="#" target="_blank">会员注册章程</a></dd>
+					<dd><a href="#" target="_blank">联系客服</a></dd>
+					<dd><a href="#" target="_blank">关于我们</a></dd>
+					<dd><a href="#" target="_blank">重大记事</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="#" target="_blank">招贤纳士</a></dt>
+					<dd><a href="#" target="_blank">市场</a></dd>
+					<dd><a href="#" target="_blank">产品</a></dd>
+					<dd><a href="#" target="_blank">线下运营</a></dd>
+					<dd><a href="#" target="_blank">大客户</a></dd>
+					<dd><a href="#" target="_blank">供应链</a></dd>
+					<dd><a href="#" target="_blank">技术</a></dd>
+					<dd><a href="#" target="_blank">财务</a></dd>
+				</dl>
+			</div>
+			<div class="phone">
+				热线电话：13813869933&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;周一至周日：9:00-17:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ客服：2036597438
+			</div>
+			<div class="copyright">
+				<a href="#" target="_blank">苏ICP备16020268号-1</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy;
+				2018
+			</div>
+			<div class="copyright">
+
+			</div>
+			<p style="display:none;">Page rendered in <strong>0.1007</strong> seconds</p>
+		</div>
+	</div> -->
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script>
+
+	var $Filter = document.getElementById("filter");
+	var $middle = document.querySelector(".curr_image");
+	var $maxImg = document.getElementById("maxImg");
+	var $max = document.getElementById("max");
+	var $Box = document.getElementById("box");
+	// //当鼠标移入小图时获取自定义属性然后将这个值赋给大图
+	// for (var i = 0; i < $Small.length; i++) {
+	// 	//给每个元素天机时间
+	// 	$Small[i].onmouseover = function () { //所有元素触发事件;
+	// 		//获取当前自定义属性
+	// 		var src = this.getAttribute("data-url");
+	// 		//将获取得值赋给大图
+	// 		$middle.src = src;
+	// 		$maxImg.src = src;
+	// 	}
+	// }
+
+	//放大镜
+	$Box.onmouseenter = function () {
+		$Filter.style.display = "block";
+		maxImg.style.display = "block";
+		max.style.display = "block";
+
+		this.onmousemove = function (e) {
+			var e = e || event;
+			var l = e.clientX - $Box.offsetLeft - $Filter.offsetWidth / 2;
+			var t = e.clientY - $Box.offsetTop - $Filter.offsetHeight / 2;
+
+			l = l > $Box.offsetWidth - $Filter.offsetWidth ? $Box.offsetWidth - $Filter.offsetWidth : (l < 0 ? 0 : l)
+			t = t > $Box.offsetHeight - $Filter.offsetHeight ? $Box.offsetHeight - $Filter.offsetHeight : (t < 0 ? 0 : t)
+			$Filter.style.left = l + "px";
+			$Filter.style.top = t + "px";
+			$maxImg.style.left = -2 * l + "px";
+			$maxImg.style.top = -2 * t + "px";
+		}
+	}
+	$Box.onmouseleave = function () {
+		$Filter.style.display = "none";
+		maxImg.style.display = "none";
+		max.style.display = "none";
+	}
+	//加减
+	$(document).ready(function () {
+		//加的效果
+		$(".tp2").click(function () {
+			var n = $(this).prev().val();
+			var num = parseInt(n) + 1;
+			if (num == 0) { return; }
+			$(this).prev().val(num);
+		});
+		//减的效果
+		$(".tp1").click(function () {
+			var n = $(this).next().val();
+			var num = parseInt(n) - 1;
+			if (num == 0) { return }
+			$(this).next().val(num);
+		});
+	});
+	//图片的传递;
+	var sid = location.href.split("?")[1].split("=")[1].split("&")[0];
+	var name = location.href.split("?")[1].split("&")[1].split("=")[1];
+	//console.log(sid);
+	$.ajax({
+		url: "../js/goods.json",
+		success: function (res, status, xhr) {
+			var reset = (res).home;
+			//console.log(reset);
+			$(".curr_image").attr("src", "../" + reset[sid - 1].img);
+			$("#maxImg").attr("src", "../" + reset[sid - 1].img);
+			$(".min>a>img").attr("src", "../" + reset[sid - 1].img);
+			$(".attribute>h1").html(reset[sid - 1].name);
+			$(".price").html(reset[sid - 1].price);
+
+		}
+	})
+	//存储到本地
+
+
+
+	$(".sc2").click(function () {
+		var so = $(".tp1").next().val();
+		$("#cart_number").html(so);
+		console.log(so);
+	})
+	$(".sc1").click(function () {
+		let numb = $(".tp1").next().val();
+		//console.log(numb);
+		var obj = [
+			{
+				"id": sid,//sid
+				"num": numb//数量
+			}
+		];
+
+		var objStr = JSON.stringify(obj);
+		//document.cookie = "name=value " ===== localStorage
+		//把要购买的商品id号和数据保存到购物车中去
+		//需要获取购物车中的所有信息，
+
+		//alert(localStorage.getItem(_this.userName+"goods"));
+		if (localStorage.getItem(name + "goods")) {//表示商品信息存在 
+			//如果商品信息存在，判断当前选中的商品编号在原信息中是否有，
+			//如果信息不存在，返回空，添加一条数据
+			//如果有，说明是要对该商品添加一个数量
+			//[{"bid":"002","num":2},{"bid":"001","num":1},{"bid":"001","num":1}]
+			var storGoods = localStorage.getItem(name + "goods");
+			var storGoodsJson = JSON.parse(storGoods);
+
+			var flag = false;//表示原商品信息中不存在当前点击的这个商品
+			for (var i = 0; i < storGoodsJson.length; i++) {
+				if (storGoodsJson[i].id == sid) {//表示在原商品信息中存在当前点击的这个商品
+					//对该商品添加一个数量
+					storGoodsJson[i].num = numb;
+					flag = true;
+					break;
+				}
+			}
+			if (!flag) {//表示原商品信息中不存在当前点击的这个商品
+				//添加一条数据
+				var goodObj = { "id": sid, "num": 1 }
+				storGoodsJson.push(goodObj);
+			}
+			var storGoodsStr = JSON.stringify(storGoodsJson);
+			//把添加好的这些商品信息保存到购物车中
+			localStorage.setItem(name + "goods", storGoodsStr);
+
+		} else {//商品信息不存在
+			//如果不存在，说明是要添加一条该商品数据。
+			localStorage.setItem(name + "goods", objStr);
+		}
+	})
+	//点击查看进入到购物车页面
+
+	$(".sc1").click(function (id, name) {
+		// var bid = location.href.split("?")[1].split("&")[0].split("=")[1];
+		var name = location.href.split("?")[1].split("&")[1].split("=")[1];
+		//console.log(name);
+		//console.log(sid);
+		$(location).attr("href", " buyshop.html?id=" + sid + "&name=" + name);
+	});
+
+
+
+</script>

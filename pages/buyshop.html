@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Document</title>
+    <style>
+        .shoptitle .widinfo p:nth-child(2) a {
+            height: 30px;
+    font-size: 20px;
+    color: red;
+      }
+      .shoptitle p:nth-child(2){
+          height: 50px;
+          display: block;
+      }
+      .shoptitle p:nth-child(2) span{
+          display: block;
+          height: 20px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px;
+       
+      }
+    
+    </style>
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="topwap container">
+            <div class="welcome fl">您好，欢迎光临GO购爱！
+                <span>南京站</span>|
+                <a href="#">加入收藏</a>
+            </div>
+            <div class="welcome fr">
+                <a href="pages/login.html">登录</a>|
+                <a href="pages/register.html">免费注册</a>
+                <span class="ico1"> <i></i></span>
+                13340002533
+            </div>
+        </div>
+    </div>
+    <div class="header container">
+        <a class="logo" href="../index.html"><img src="../picture/logo.png"></a>
+        <div class="header_search">
+            <form method="get" action="">
+                <div class="searchbox">
+                    <input type="text" id="searchinp" placeholder="请输入商品名称" />
+                    <input type="submit" id="searchbtn" value="搜 索" />
+                </div>
+            </form>
+            <p class="hotgoods">
+                热门搜索：
+                <a href="##">美食</a>
+                <a href="##" class="baby_c">零食</a>
+                <a href="##">精美礼盒</a></p>
+        </div>
+    </div>
+    <!-- ---------------购物 ------------------->
+    <div class="shopBuy container">
+        <h5>我的购物车</h5>
+        <h6>查看您的购物车商品清单，勾选商品，进入下一步操作</h6>
+        <div id="shopcon">
+            <ul class="shoptitle shoptitlebg">
+                <li class="wid1"><input type="checkbox" id="checkAll">全选</li>
+                <li class="wid2">商品</li>
+                <li class="wid3">数量</li>
+                <li class="wid4">单价（元）</li>
+                <li class="wid5">小计(元)</li>
+                <li class="wid6">操作</li>
+            </ul>
+            <div id="shoplist">
+
+                <!-- <div class="shopbox">
+                    <h3><input type="checkbox">店铺:<b>GO购爱</b></h3>
+                    <ul class="shoptitle clearfix">
+                        <li class="wid1"><input type="checkbox" class="check"></li>
+                        <li class="wid2 widinfo">
+                            <a class="widinfoimg"><img src="../img/1000img01.jpg"></a>
+                            <p><a>广西名优特产竹福星甜味竹汁竹沥 清热下火凉茶解酒茶醒酒茶</a>
+                                <span>规格：12罐2箱;运费：包邮;</span></p>
+                        </li>
+                        <li class="wid3">
+                            <div class="viewInpbox clearfix">
+                                <input type="text" value="1" class="viewinp">
+                                <div class="munbtn_box"><a class="muincrease munbtn" id="muincrease">∧</a><a class="mudecrease munbtn"
+                                        id="mudecrease">∨</a></div>
+                                <span>件</span>
+                            </div>
+                        </li>
+                        <li class="wid4"><span class="price">￥17.00</span></li>
+                        <li class="wid5"><span class="price tolprice">￥ 17.00<span></li>
+                        <li class="wid6"><a class="del">删除</a></li>
+                    </ul>
+                </div>
+            </div> -->
+
+            </div>
+            <div class="cartnew-sum clearfix">
+                <div class="fl cartnewLt">
+                    <input type="checkbox" id="deslection">
+                    <span>取消全选</span>
+                    <a id="clearCart" class="clearCart">清空购物车</a>
+                </div>
+                <div class="fr cartnewRt">
+                    <p>商品数总计：<span id="totalCount">0</span></p>
+                    <p>优惠价：<b class="cartDiscount">￥0.00 元</b></p>
+                    <p>商品总价（不含运费）：<b id="totalPrice">￥0.00 元</b></p>
+                </div>
+            </div>
+            <div class="cartnew-submit clearfix">
+                <a href="" class="topay" id="topay">去结算 </a>
+                <a href="" class="buy" id="cartbuy"> 继续购物</a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        //从url中获取用户名
+        //根据用户名从localStorage中拿到所有要购买的商品信息
+        //从后台拿到所有的商品数据
+        //通过遍历商品数据和localStorage中的信息，
+        //根据匹配的bid找到对应的那个商品的数据
+        //把对应数据填充到页面  单例模式
+
+        $(function () {
+            new ShowCartsData().init();
+        })
+        function ShowCartsData() {
+            if (!ShowCartsData.property) {
+                ShowCartsData.property = {
+                    //search:查询串
+                    name: location.search.split("?")[1].split("&")[1].split("=")[1],
+                    oCarts: $("#shoplist"),
+
+                    goods: [],
+
+                    init: function () {
+                        //显示信息
+                        this.showGoodsInfo();
+                        //向后台发送请求，拿到所有的商品数据
+                        this.getGoods();
+                        //console.log(this.getStorGoods());
+                    },
+                    getGoods: function () {
+                        $.getJSON("../js/goods.json", function (res) {
+                            //保存所有商品数据
+                            this.goods = (res).home;
+                            //在页面显示所有对应商品数据
+                            this.showGoodsInfo();
+
+                            //对页面数据进行增删改查
+                            new SelectEvent().init();
+
+                        }.bind(this));
+                    },
+                    getStorGoods: function () {//从购物车中获取所有要购买的商品信息
+                        if (localStorage.getItem(this.name + "goods")) {
+                            var storGoodsStr = localStorage.getItem(this.name + "goods");
+                            return JSON.parse(storGoodsStr);
+                        } else {
+                            return null;
+                        }
+                    },
+                    showGoodsInfo: function () {//在页面显示所有对应商品数据
+                        //console.log(this.goods);
+                        if (this.getStorGoods()) {
+                            var cartGoodsInfoJson = this.getStorGoods();
+                            //console.log(cartGoodsInfoJson);
+                            var str = "";
+                            //     //遍历商品数据和localStorage中的信息
+                            for (var i = 0; i < this.goods.length; i++) {
+                                for (var j = 0; j < cartGoodsInfoJson.length; j++) {
+                                    //根据匹配的id找到对应的那个商品的数据
+                                    if (this.goods[i].id == cartGoodsInfoJson[j].id) {
+                                        str += `
+                                            <ul class="shoptitle clearfix">
+                                                <li class="wid1"><input type="checkbox" class="check"></li>
+                                                <li class="wid2 widinfo">
+                                                <a class="widinfoimg"><img src="../${this.goods[i].img}"></a>
+                                                <p><a>${this.goods[i].name}</a>
+								                    <span>${this.goods[i].title}</span></p>
+                                                <p><input class="bid" type="hidden" value="${cartGoodsInfoJson[j].id}"/></p>
+                                                </li>
+                                                <li class="wid3">
+                                                <div class="viewInpbox clearfix">
+                                                    <input type="text" value="${cartGoodsInfoJson[j].num}" class="viewinp">
+                                                    <div class="munbtn_box"><a class="muincrease munbtn" id="muincrease">∧</a><a class="mudecrease munbtn" id="mudecrease">∨</a></div>
+                                                    <span>件</span>
+                                                </div>
+                                                </li>
+                                                <li class="wid4"><span class="price">${this.goods[i].price}</span></li>
+                                                <li class="wid5"><span class="price tolprice">￥ ${cartGoodsInfoJson[j].num * this.goods[i].price}<span></li>
+                                                <li class="wid6"><a class="del">删除</a></li>
+                                            </ul>
+                                        `;
+                                    }
+                                }
+                            }
+                            this.oCarts.html(str);
+                        }
+                    },
+                }
+            }
+            console.log(name);
+            return ShowCartsData.property;
+        }
+        // $("#deslection").click(function () {
+        //判断是否点击事件
+        //     if ($(this).prop("checked")) {
+        //         alert(1);
+        //     }
+        // })
+        //选中事件全选
+        class SelectEvent {
+            //constructor 属性返回对创建此对象的数组函数的引用。
+            constructor() {
+                this.checkAll = $("#checkAll");//全选按钮
+                this.deslection = $("#deslection");// 取消全选
+                this.totalCount = $("#totalCount");//商品总数
+                this.totalPrice = $("#totalPrice");//商品总价
+                this.check = $(".check");//选中单个
+            }
+            init() {
+                this.selectAll();//选中所有
+                this.selectOne();//选中单个
+                this.deslectionAll();//取消选择所有
+            }
+            //选中所有事件
+            selectAll() {
+                var _this = this;
+                this.checkAll.click(function () {
+                    //点击当前按钮，选中所有按钮
+                    if ($(this).prop("checked")) {
+                        _this.check.prop("checked", true);
+                        //点击全选后，全选禁止
+                        $(this).prop("disabled", true);
+                        //取消选择按钮解除禁止
+                        _this.deslection.prop("disabled", false);
+                        //取消选择按钮变成可选状态
+                        _this.deslection.prop("checked", false);
+                    }
+                    //alert(1);
+                })
+            }
+            //选中单个事件
+            selectOne() {
+                var _this = this;
+                //选中的次数等于0 定义全部选中状态使用
+                // var checkCount = 0;
+                // var uncheckCount = 0;
+                this.check.click(function () {
+                    var checked = false;//表示没有被选中的
+                    var unCheck = false;//表示所有的都被选中
+                    //1.只要有一个商品未选中全选按钮要解禁，并且为可选状态
+                    //2.只要有一个被选中,取消选择按钮要解禁，并且为可选状态；遍历实现；
+                    //3.只要全部选中,全选按钮变可选状态，禁止点击；
+                    //4.只要没有一个被选中，取消全选状态是选中状态，并且是禁止点击；
+                    _this.check.each(function (index, ele) {
+                        if ($(ele).prop("checked")) {//只要执行到这里，意味着最少有一个被选中；
+                            checked = true;//表示有一个被选中
+                            // checkCount++;
+                            // uncheckCount = 0;
+                        } else {//只要到这里执行，最少有一个未被选中
+                            unCheck = true;//表示有一个未被选中；
+                            // checkCount = 0;
+                            // uncheckCount++;
+                        }
+                        if (unCheck) { //1.只要有一个商品未选中
+                            //全选按钮要解禁，并且为可选状态
+                            _this.checkAll.prop("disabled", false);
+                            _this.checkAll.prop("checked", false);
+                        } else {//全部选中
+                            //3.只要全部选中, 全选按钮变可选状态，禁止点击；
+                            _this.checkAll.prop("disabled", true);
+                            _this.checkAll.prop("checked", true);
+                        }
+                        if (checked) {//2.只要有一个被选中
+                            //取消选择按钮要解禁，并且为可选状态
+                            _this.deslection.prop("disabled", false);
+                            _this.deslection.prop("checked", false);
+                        } else {//没有一个被选中
+                            // 4.只要没有一个被选中，取消全选状态是选中状态，并且是禁止点击；
+                            _this.deslection.prop("disabled", true);
+                            _this.deslection.prop("checked", true);
+                        }
+                        // console.(checkCount);
+                        // if (checkCount == _this.check.size()) {//表示全部被选中
+                        //     //3.只要全部选中, 全选按钮变可选状态，禁止点击；
+                        //     _this.checkAll.prop("disabled", true);
+                        //     _this.checkAll.prop("checked", true);
+                        // }
+                        // if (checkCount == _this.check.size()) {//表示全部未被选中
+                        //     // 4.只要没有一个被选中，取消全选状态是选中状态，并且是禁止点击；
+                        //     _this.deslection.prop("disabled", true);
+                        //     _this.deslection.prop("checked", true);
+                        // }
+                    })
+                })
+            }
+            //取消所有事件
+            deslectionAll() {
+                var _this = this;
+                this.deslection.click(function () {
+                    _this.check.prop("checked", false);
+                    //当前的取消选择按钮禁止点击
+                    $(this).prop("disabled", true);
+                    //选择所有按钮解除禁止
+                    _this.checkAll.prop("disabled", false);
+                    //取消所有按钮的选中状态
+                    _this.checkAll.prop("checked", false);
+                });
+            }
+        }
+        //计算商品价格和书数量
+        class ComputeGoods {
+            constructor() {
+                /*通过拿节点计算
+                * 1.当点击全选时，计算商品总数和需付金额
+                * 2.取消选择时商品总数和需付金额清零
+                * 3.选中单个时，遍历有几个商品是选中的，根据选中的来计算 商品总数和需付金额
+                */
+            }
+            computeTotalNum() {
+
+            }
+            computeTotalPrice() {
+
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

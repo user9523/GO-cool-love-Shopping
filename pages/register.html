@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/register.css">
+	<style>
+		.box div{
+		width: 350px;
+		height: 36px;
+		display: none;
+	}
+	#succ{
+		display: none;
+	}
+	
+	</style>
+</head>
+
+<body>
+	<div class="header"></div>
+	<!-- <div class="gwc_top">
+		<div class="container">
+			<div class="left fl">
+				<div class="logo_gwc"><a href="#"><img src="picture/logo.png" alt=""></a></div>
+			</div>
+			<div class="right fr">
+				<a href="http://www.gogouai.com/member/user/login">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.gogouai.com/member/user/register">免费注册</a>&nbsp;&nbsp;|&nbsp;
+				<a href="http://www.gogouai.com/member/home/index">个人中心</a>&nbsp;&nbsp;|&nbsp;
+				<a href="http://www.gogouai.com/archive/list_3.html">帮助中心</a>&nbsp;
+				<span class="phone"><em class="ico1"></em>13813869933</span>
+			</div>
+		</div>
+	</div> -->
+	<div class="reg container">
+		<div class="box">
+			<form action="../php/register.php" method="POST">
+				<h1>欢迎注册</h1>
+				<dl class="clearfix">
+					<dt><em>*</em>用户名：</dt>
+					<dd>
+						<input type="text" id="username" placeholder="请再次输入您要设置的用户名" name="zhanghao">
+						<div>
+							<span id=" info_user" class="info info_user">请输入用户名，4~20位，由中文、英文、数字或符号"_"组成</span>
+							<span id="error_user" class="error error_user">输入错误，请重新输入!</span>
+							<span id="wu_user" class="error error_user">用户名不能为空</span>
+						</div>
+						<span id="succ">√</span>
+					</dd>
+				</dl>
+
+				<dl class="clearfix">
+					<dt><em>*</em>手机号码：</dt>
+					<dd>
+						<input type="text" id="mobile" class="mob" placeholder="请输入您的手机号码">
+						<div>
+							<span id=" info_phone">请填写正确的手机号，以便接收订单信息已及找回密码</span>
+							<span id="error_phone" class="error error_user">输入错误，请重新输入!</span>
+						</div>
+						<span id="succ">√</span>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt><em>*</em>设置密码：</dt>
+					<dd><input type="password" id="password" class="pw" placeholder="请输入您要设置的密码" name="mima">
+						<div>
+							<span id=" info_pwd">6~20位，由英文、数字或符号组成</span>
+							<span id="wu_user" class="error error_user">密码不能为空</span>
+							<span id="error_pwd">输入错误，请重新输入!</span>
+						</div>
+						<span id="succ">√</span>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt><em>*</em>确认密码：</dt>
+					<dd><input type="password" id="password2" class="pw" placeholder="请再次输入您要设置的密码">
+						<div>
+							<span id="info_pwds">再次输入密码</span>
+							<span id="wu_pwds" class="error error_user">密码不能为空</span>
+							<span id="error_pwds" class="error error_user">两次输入不一致</span>
+						</div>
+						<span id="succ">√</span>
+					</dd>
+				</dl>
+				<!-- <dl class="clearfix " id="verify_email">
+				<dt><em></em>邮箱账号：</dt>
+				<dd>
+					<input type="text" id="email" placeholder="请输入您要绑定的邮箱账号">
+				</dd>
+			</dl> -->
+				<dl class="clearfix" style="display:none">
+					<dt>会员卡：</dt>
+					<dd>
+						<input type="text" id="cardno" placeholder="请输入您的会员卡卡号！"><br>
+						<p style="color:red;">会员卡支付专享95折优惠</p>
+						<p>
+							<label id="want_card_label"><a href="javascript:;" target="_blank" id="have_card" class="hide">我有会员卡</a></label><br><br>
+
+						</p>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt></dt>
+					<dd>
+						<label><input id="agreement" type="checkbox" class="checkbox">我已阅读并同意<a href="http://gogouai.com/archive/14.html"
+							 target="_blank">《GO购爱注册协议》</a>
+							&nbsp;&nbsp;</label>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt></dt>
+					<dd>
+						<input type="submit" value="注册" class="s" id="register" style="float:left;">
+						<a href="http://www.gogouai.com/card" target="_blank" style="display:none;width:138px; line-height:38px;margin-left:20px;background:#ffa628;color:#fff;border-radius:5px;text-align:center;border:1px solid #ccc;float:left;font-size:16px;text-decoration:none;">申请会员卡</a>
+					</dd>
+				</dl>
+				<div class="login">已有账号？<a href="http://www.gogouai.com/member/user/login">直接登录</a></div>
+			</form>
+		</div>
+		<div class="mobtext">
+		</div>
+	</div>
+	<div class="fix-rr">
+		<div id="qqkf" class="sidefixed wb">客服在线</div>
+		<div id="web_div" class="sidefixed wb1" style="display:none">
+			<div class="fixclose weibo" style="display:none"><img src="../picture/weibo.png" alt=""></div>
+		</div>
+		<div id="wx_div" class="sidefixed wb2">
+			<div class="fixclose weixin"><img src="../picture/weixin.png" alt=""></div>
+		</div>
+		<div id="goTop" class="sidefixed wb3"></div>
+	</div>
+	<div class="footer"></div>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/conment.js"></script>
+	<script src="../js/animate10.0.js"></script>
+	<script>
+		//用户名
+		$("#username").focus(function () {
+			$(this).siblings().show().children("span").eq(0).show().siblings().hide();
+			//$("#info_user").show().siblings().hide();
+			// $(this).siblings("div").children("span").eq(0).show().siblings().hide();
+			$(this).siblings("#succ").hide();
+		})
+		var usernameFlag = false;
+		$("#username").blur(function () {
+			var uname = $("#username").val();
+			var strname = /^([\u2E80-\u9FFF]|(\w)){4,20}$/;
+			if (uname.length == 0) {
+				$(this).siblings("div").children().eq(2).show().siblings().hide();
+				$(this).siblings("div").next("#succ").hide();
+			} else if (uname.length > 20 || uname.length < 4) {
+				$(this).siblings("div").children().eq(1).show().siblings().hide();
+				$(this).siblings("div").next("#succ").hide();
+			} else if (strname.test(uname)) {
+				$(this).siblings("div").hide().siblings().show();
+				$(this).siblings("#succ").show();
+				usernameFlag = true;
+			} else {
+				$(this).siblings("div").children().eq(1).show().siblings().hide();
+				$(this).siblings("div").next("#succ").hide();
+			}
+		})
+		//手机号
+		$("#mobile").focus(function () {
+			$(this).siblings("div").show();
+			$(this).siblings("div").children("span").eq(0).show().siblings().hide();
+			$(this).siblings("#succ").hide();
+		})
+		var phoneFlag = false;
+		$("#mobile").blur(function () {
+			var mobile = $("#mobile").val();
+			var strmobile = /^1[3-9]\d{9}$/;
+			if (strmobile.test(mobile)) {
+				$(this).siblings("div").hide().siblings().show();
+				$(this).siblings("#succ").show();
+				phoneFlag = true;
+			} else {
+				$(this).siblings("div").children().eq(1).show().siblings().hide();
+				$(this).siblings("div").next("#succ").hide();
+			}
+		})
+		//密码
+		$("#password").focus(function () {
+			$(this).siblings("div").show();
+			$(this).siblings("div").children("span").eq(0).show().siblings().hide();
+			$(this).siblings("#succ").hide();
+		})
+		var pwdFlag = false;
+		$("#password").blur(function () {
+			var pwd = $("#password").val();
+			var strPwd = /^([0-9a-zA-Z]|(\!)|(\.)|(\+)|(\?)|(\$)|(\^)|(,)|(`)|(\|)){6,20}$/;
+			if (strPwd.test(pwd)) {
+				$(this).siblings("div").hide().siblings().show();
+				$(this).siblings("#succ").show();
+				pwdFlag = true;
+			} else if (pwd == null) {
+				$(this).siblings("div").children().eq(1).show().siblings().hide();
+				$(this).siblings("#succ").hide();
+			} else {
+				$(this).siblings("div").children().eq(2).show().siblings().hide();
+				$(this).siblings("div").next("#succ").hide();
+			}
+		})
+		//再次确认密码
+		$("#password2").focus(function () {
+			$(this).siblings("div").show();
+			$(this).siblings("div").children("span").eq(0).show().siblings().hide();
+			$(this).siblings("#succ").hide();
+		})
+		var pwdsFlag = false;
+		$("#password2").blur(function () {
+			var pwds = $("#password2").val();
+			var pwd = $("#password").val();
+			//console.log(pwd, pwds);
+			if (pwdFlag) {
+				if (pwds == null) {
+					$(this).siblings("div").children().eq(1).show().siblings().hide();
+					$(this).siblings("#succ").hide();
+				} else if (pwds == pwd) {
+					$(this).siblings("div").hide().siblings().show();
+					$(this).siblings("#succ").show();
+					pwdsFlag = true;
+				} else {
+					$(this).siblings("div").children().eq(2).show().siblings().hide();
+					$(this).siblings("div").next("#succ").hide();
+				}
+			} else {
+				$(this).siblings("div").children("span").eq(0).show().siblings().hide();
+			}
+		})
+		//判断是否可提交
+		$("form").submit(function () {
+			if (usernameFlag && phoneFlag && pwdFlag && pwdsFlag) {
+				return true;
+			} else {
+				return false;
+			}
+		})
+
+	</script>
+</body>
+
+</html>

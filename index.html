@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GO购爱商城 - GO购爱</title>
+    <meta baidu-gxt-verify-token="">
+    <meta name="keywords" content="GO购爱,网上生鲜商城,进口食品,生鲜,水果,厨房用品,零食,牛奶" />
+    <meta name="description" content="GO购爱是地区最方便快捷的购物网站，在线销售原味农场天然有机农产品，以及新鲜水果、放心蔬菜、肉禽蛋奶、海鲜水产、休闲食品、酒水茶冲、零食饮料、粮油副食等多种商品，客服电话：13813869933" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-pagination{
+    	margin-bottom: 10px;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color:#000;
+      opacity: 1;
+      background: rgba(0,0,0,0.2);
+      margin: 0 4px;
+    }
+    .swiper-pagination-bullet-active {
+      color:#fff;
+      background: #007aff;
+    }
+.right1{
+    width: 990px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.merli{
+        margin-top: 0px;
+        margin-right: 10px;
+        width: 188px;
+        height: 281px;
+}
+.merli img:hover{
+    border: 1px solid red;
+}
+.merli h2:hover{
+    color: red;
+}
+.merli em{
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 16px;
+    color: #ee3c3c;
+}
+.merli h2{
+    font-family: "\9ED1\4F53";
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+.merli P{
+    line-height: 18px;
+    height: 18px;
+    overflow: hidden;
+    color: #8d8d8d;
+    text-align: center;
+}
+.merli img{
+    width: 186px;
+    height: 186px;
+    border: 1px solid #e7e7e7;
+    display: block;
+    margin: 0 auto 3px;
+    background-size: contain;
+}
+    </style>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="top">
+        <div class="topwap container">
+            <div class="welcome fl">您好，欢迎光临GO购爱！
+                <span>南京站</span>|
+                <a href="#">加入收藏</a>
+            </div>
+            <div class="welcome fr">
+                <a href="pages/login.html">登录</a>|
+                <a href="pages/register.html">免费注册</a>
+                <span class="ico1"> <i></i></span>
+                13340002533
+            </div>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <div class="header container">
+        <a class="logo" href="index.html"><img src="picture/logo.png"></a>
+        <div class="header_search">
+            <form method="get" action="">
+                <div class="searchbox">
+                    <input type="text" id="searchinp" placeholder="请输入商品名称" />
+                    <input type="submit" id="searchbtn" value="搜 索" />
+                </div>
+            </form>
+            <p class="hotgoods">
+                热门搜索：
+                <a href="##">美食</a>
+                <a href="##" class="baby_c">零食</a>
+                <a href="##">精美礼盒</a></p>
+        </div>
+    </div>
+    <!-- ------------------------nav ---------------------->
+    <div id="nav">
+        <div class="area container">
+            <div class="leftnav fl">
+                <!---------------------- 商品分类 开始 -------------------------------->
+                <div class="feilei">
+                    所有商品分类
+                    <em></em>
+                </div>
+                <div class="hsh_sort">
+                    <ul>
+                        <li class="">
+                            <em class="tp1" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">雨润直销</a></h3>
+                                <p>
+                                    <a href="#" target="_blank">米面粮油</a>
+                                    <a href="#" target="_blank">酒水饮品</a>
+                                </p>
+                            </div>
+                            <div class="item" style="top:-1px;width:480px;">
+                                <div class="im">
+                                    <dl class="clearfix">
+                                        <dt><a href="#" target="_blank">米面粮油</a></dt>
+                                        <dd>
+                                        </dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt><a href="#" target="_blank">酒水饮品</a></dt>
+                                        <dd>
+                                        </dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt><a href="#" target="_blank">牛排系列</a></dt>
+                                        <dd>
+                                        </dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt><a href="#" target="_blank">精选茗茶</a></dt>
+                                        <dd>
+                                        </dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt><a href="#" target="_blank">优选零食</a></dt>
+                                        <dd>
+                                        </dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt><a href="#" target="_blank">调味酱料</a></dt>
+                                        <dd>
+                                        </dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt><a href="#" target="_blank">肉食产品</a></dt>
+                                        <dd>
+                                        </dd>
+                                    </dl>
+                                    <dl class="clearfix">
+                                        <dt><a href="#" target="_blank">春节礼盒</a></dt>
+                                        <dd>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="tp2" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">节日甄选</a></h3>
+                                <p>
+                                    <a href="#" target="_blank">节日专区</a>
+                                    <a href="#" target="_blank">甄选礼盒</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="tp3" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">时令水果</a></h3>
+                                <p>
+                                    <a href="#" target="_blank">进口水果</a>
+                                    <a href="#" target="_blank">国产水果</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="tp4" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">进口红酒</a></h3>
+                                <p>
+                                </p>
+                            </div>
+                            <div class="item" style="top:-1px;width:480px;">
+                                <div class="im">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="tp5" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">天天美食</a></h3>
+                                <p>
+                                    <a href="#" target="_blank">手工美点</a>
+                                    <a href="#" target="_blank">成品菜</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="tp6" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">放心蔬菜</a></h3>
+                                <p>
+                                    <a href="#" target="_blank">精品蔬菜</a>
+                                    <a href="#" target="_blank">有机蔬菜</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="tp7" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">休闲食品</a></h3>
+                                <p>
+                                    <a href="#" target="_blank">零食</a>
+                                    <a href="http://www.gogouai.com/cat_5002.html" target="_blank">坚果蜜饯</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="tp8" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">禽肉蛋豆</a></h3>
+                                <p>
+                                    <a href="#" target="_blank">牛羊肉</a>
+                                    <a href="#" target="_blank">蛋品</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="tp9" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">粮油副食</a></h3>
+                                <p>
+                                    <a href="#" target="_blank">米面杂粮</a>
+                                    <a href="#" target="_blank">食用油</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <em class="tp10" style="margin-top:18px;float:left;"></em>
+                            <div class="ilink">
+                                <h3><a href="#" target="_blank">农场直供</a></h3>
+                                <p>
+                                    <a href="#" target="_blank">源头特产</a>
+                                    <a href="#" target="_blank">宅配套餐</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li style="height:138px;margin-left: 0px;display: none" class="">
+                            <div style="padding-left: 25px;padding-top: 25px;">
+                                <a href="javascript:void()"><img src="picture/logo.png" alt="GO爱购"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="home fl">
+                <a href="#" style="color:#fff; font-size:15px;">首&nbsp;&nbsp;&nbsp;页</a>
+            </div>
+            <div class="navlist fl">
+                <a href="#">时令水果</a>
+                <a href="#">天天美食</a>
+                <a href="#">休闲食品</a>
+                <a href="#">农场直供</a>
+            </div>
+            <div class="shopping fr">
+                <div class="bgl">
+                    <a href="http://www.gogouai.com/cart/index" style="color:#fff;">
+                        <div class="bgr">
+                            <div class="number" id="cart_number">0</div>
+                            <span class="simg"></span>购物车
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cA_area container">
+        <div class="focus">
+            <div id="banner" class="slideBox">
+                <div class="hd swiper-pagination">
+                </div>
+                <div class="bd">
+                    <div class="tempWrap swiper-container">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide" "><a href=" #" target="_blank"><img src="picture/banner01.jpg" alt=""></a></li>
+                            <li class="swiper-slide" "><a href=" #" target="_blank"><img src="picture/banner02.jpg" alt=""></a></li>
+                            <li class="swiper-slide" "><a href=" #" target="_blank"><img src="picture/banner03.jpg" alt=""></a></li>
+                            <li class="swiper-slide" "><a href=" #" target="_blank"><img src="picture/banner04.jpg" alt=""></a></li>
+                        </ul>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="focusImages">
+                <a href="#"><img src="picture/14761677020usmcl.jpg" /></a>
+                <a href="#"><img src="picture/1476167727lqvhc4.jpg" /></a>
+                <a href="#"><img src="picture/1476167746josluw.jpg" class="last" /></a>
+            </div>
+        </div>
+        <div class="login">
+            <div class="lbox">
+                <div class="member-logout clearfix">
+                    <a href="pages/login.html" class="dl"><img src="picture/login.jpg"></a>
+                    <a href="pages/register.html" class="zc"><img src="picture/register.jpg"></a>
+                </div>
+                <div><img src="picture/index_ico.jpg"></div>
+            </div>
+            <div class="newsBoxs lboxs mt10" id="archive1">
+                <div class="news_tabs hd">
+                    <ul>
+                        <li class="on">每日推荐</li>
+                    </ul>
+                </div>
+                <div class="news_lists bd">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img class="scrollLoading" data-url="#" src="picture/1px.jpg" title="金汤柠檬鱼 - " width="177"
+                                    height="177" />
+                                <p style="font-size:14px; padding-top:10px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width:206px;">金汤柠檬鱼</p>
+                                <p style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width:206px;"></p>
+                                <p class="prices"> <em>￥48.00</em> </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="newsBox lbox mt10" id="archive">
+                <div class="news_tab hd">
+                    <ul>
+                        <li style="width:49.9%;"><a href="#" target="_blank">公告</a></li>
+                        <li style="width:49.9%;"><a href="#" target="_blank">资讯</a></li>
+                    </ul>
+                </div>
+                <div class="news_list bd">
+                    <ul>
+                        <li><a href="#" target="_blank">通知</a></li>
+                    </ul>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main部分 ----------------------------->
+    <div class="main1 container">
+        <div class="title mt10">
+            <span><em>3F</em><a href="#" target="_blank">时令水果</a></span>
+        </div>
+        <div class="prouductsBox mt10">
+            <div class="floor_body fl">
+                <div class="tempwarp">
+                    <ul>
+                        <li><a href="#"><img src="img/longyan01.jpg" alt=""></a></li>
+                        <!-- <li><a href="#"><img src="img/longyan02.jpg" alt=""></a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div id="goods">
+                <ul class="right1 fr"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- <ul class="merlist clearfix">
+                    <li>
+                        <a href="goods_953.html" target="_blank" title="红心柚">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2017/10/1508393460poa4Oj.jpg"
+                                src="http://upload.gogouai.com/2017/10/1508393460poa4Oj.jpg" title="红心柚">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">红心柚</h2>
+                            <p class="txt txtcenter">浓甜多汁，甜而不腻</p>
+                            <p class="prices txtcenter">
+                                <em>￥17</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_645.html" target="_blank" title="云南蜜桔1kg">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/08/1472462059JPf1zX.jpeg"
+                                src="http://upload.gogouai.com/2016/08/1472462059JPf1zX.jpeg" title="云南蜜桔1kg">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">云南蜜桔1kg</h2>
+                            <p class="txt txtcenter">柔嫩爽口 果肉多汁</p>
+                            <p class="prices txtcenter">
+                                <em>￥7.80</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_351.html" target="_blank" title="国产绿心猕猴桃6个">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/05/1463472499Tjg9r6.jpeg"
+                                src="http://upload.gogouai.com/2016/05/1463472499Tjg9r6.jpeg" title="国产绿心猕猴桃6个">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">国产绿心猕猴桃6个</h2>
+                            <p class="txt txtcenter">果实饱满,VC丰富</p>
+                            <p class="prices txtcenter">
+                                <em>￥15.90</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_569.html" target="_blank" title="泰国进口椰青1个">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/07/1469667205tlTsJb.jpg"
+                                src="http://upload.gogouai.com/2016/07/1469667205tlTsJb.jpg" title="泰国进口椰青1个">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">泰国进口椰青1个</h2>
+                            <p class="txt txtcenter">椰汁清甜 椰肉细腻</p>
+                            <p class="prices txtcenter">
+                                <em>￥19.80</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_332.html" target="_blank" title="水果黄瓜0.5kg">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/05/1463016060IRx1Ys.jpeg"
+                                src="http://upload.gogouai.com/2016/05/1463016060IRx1Ys.jpeg" title="水果黄瓜0.5kg">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">水果黄瓜0.5kg</h2>
+                            <p class="txt txtcenter">止渴解毒，美容养颜</p>
+                            <p class="prices txtcenter">
+                                <em>￥7.50</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_218.html" target="_blank" title="西州蜜哈密瓜1个 约5斤">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/05/1462959197WxtJAJ.jpeg"
+                                src="http://upload.gogouai.com/2016/05/1462959197WxtJAJ.jpeg" title="西州蜜哈密瓜1个 约5斤">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">西州蜜哈密瓜1个 约5斤</h2>
+                            <p class="txt txtcenter">松脆爽口，清香四溢</p>
+                            <p class="prices txtcenter">
+                                <em>￥21.8</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_659.html" target="_blank" title="平和琯溪白心蜜柚1个约2.5斤">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/09/1474616830YvSU32.jpeg"
+                                src="http://upload.gogouai.com/2016/09/1474616830YvSU32.jpeg" title="平和琯溪白心蜜柚1个约2.5斤">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">平和琯溪白心蜜柚1个约2.5斤</h2>
+                            <p class="txt txtcenter">鲜嫩美味 柚香浓郁</p>
+                            <p class="prices txtcenter">
+                                <em>￥9.80</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_306.html" target="_blank" title="山东红富士1kg">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/05/1463023207Fw2Oud.jpeg"
+                                src="http://upload.gogouai.com/2016/05/1463023207Fw2Oud.jpeg" title="山东红富士1kg">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">山东红富士1kg</h2>
+                            <p class="txt txtcenter">酸甜可口 品质上乘</p>
+                            <p class="prices txtcenter">
+                                <em>￥10.80</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_257.html" target="_blank" title="海南青芒芒果2只约2.3斤">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/09/1473407291GAh5Hc.jpg"
+                                src="http://upload.gogouai.com/2016/09/1473407291GAh5Hc.jpg" title="海南青芒芒果2只约2.3斤">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">海南青芒芒果2只约2.3斤</h2>
+                            <p class="txt txtcenter">汁多味美，果香浓郁</p>
+                            <p class="prices txtcenter">
+                                <em>￥13.80</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_285.html" target="_blank" title="四川安岳黄柠檬2个">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/05/1463015615Z8NpAo.jpeg"
+                                src="http://upload.gogouai.com/2016/05/1463015615Z8NpAo.jpeg" title="四川安岳黄柠檬2个">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">四川安岳黄柠檬2个</h2>
+                            <p class="txt txtcenter">多VC，美白神器</p>
+                            <p class="prices txtcenter">
+                                <em>￥5.00</em>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                                //      {
+                                //     "img": "../img/id2.jpg",
+                                //     "name": "云南蜜桔1kg",
+                                //     "title": "柔嫩爽口 果肉多汁",
+                                //     "price": "¥7.8"
+                                // }
+            
+        -->
+    <div class="main1 container">
+        <div class="title mt10">
+            <span><em>4F</em><a href="http://www.gogouai.com/cat_102.html" target="_blank">天天美食</a></span>
+        </div>
+        <div class="prouductsBox mt10">
+            <div class="fl floor_body">
+                <div class="tempWrap" style="overflow:hidden; position:relative; width:200px">
+                    <ul class="fl" style="width: 400px; left: -200px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                        <li style="width: 200px; float: left;"><a href="goods_194.html" target="_blank"><img class="scrollLoading"
+                                    data-url="http://upload.gogouai.com/2016/10/1476171618jYaCwj.jpg" src="http://upload.gogouai.com/2016/10/1476171618jYaCwj.jpg"
+                                    width="200" height="540"></a></li>
+                        <li style="width: 200px; float: left;"><a href="goods_189.html" target="_blank"><img class="scrollLoading"
+                                    data-url="http://upload.gogouai.com/2016/10/14761717041LlonW.jpg" src="http://upload.gogouai.com/2016/10/14761717041LlonW.jpg"
+                                    width="200" height="540"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <ul class="merlist clearfix">
+                    <li>
+                        <a href="goods_189.html" target="_blank" title="杂粮馒头4只">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/05/1463042723J1n3fp.jpg"
+                                src="http://upload.gogouai.com/2016/05/1463042723J1n3fp.jpg" title="杂粮馒头4只">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">杂粮馒头4只</h2>
+                            <p class="txt txtcenter">多重营养 完美搭配</p>
+                            <p class="prices txtcenter">
+                                <em>￥2.80</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_239.html" target="_blank" title="南京鲜肉包4只">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/09/1475216971UxewBz.jpg"
+                                src="http://upload.gogouai.com/2016/09/1475216971UxewBz.jpg" title="南京鲜肉包4只">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">南京鲜肉包4只</h2>
+                            <p class="txt txtcenter">肉多美味</p>
+                            <p class="prices txtcenter">
+                                <em>￥7.20</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_347.html" target="_blank" title="西芹南瓜百合">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/05/1463042636Y9WbMa.jpg"
+                                src="http://upload.gogouai.com/2016/05/1463042636Y9WbMa.jpg" title="西芹南瓜百合">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">西芹南瓜百合</h2>
+                            <p class="txt txtcenter">入口软糯 甜而不腻</p>
+                            <p class="prices txtcenter">
+                                <em>￥18</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_256.html" target="_blank" title="清水蛋糕6块">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/09/1475216884wplx88.jpg"
+                                src="http://upload.gogouai.com/2016/09/1475216884wplx88.jpg" title="清水蛋糕6块">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">清水蛋糕6块</h2>
+                            <p class="txt txtcenter">每个重约100g</p>
+                            <p class="prices txtcenter">
+                                <em>￥9.60</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_663.html" target="_blank" title="葡缇酥6只">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/09/1475217257pAkkQk.jpg"
+                                src="http://upload.gogouai.com/2016/09/1475217257pAkkQk.jpg" title="葡缇酥6只">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">葡缇酥6只</h2>
+                            <p class="txt txtcenter">美味可口 营养价值高</p>
+                            <p class="prices txtcenter">
+                                <em>￥8.00</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_206.html" target="_blank" title="白灼广东菜心">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/05/1463041345D8Wwgv.jpg"
+                                src="http://upload.gogouai.com/2016/05/1463041345D8Wwgv.jpg" title="白灼广东菜心">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">白灼广东菜心</h2>
+                            <p class="txt txtcenter">清淡可口 营养美味</p>
+                            <p class="prices txtcenter">
+                                <em>￥20.00</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_253.html" target="_blank" title="银杏爆鸭掌">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/05/1463042695AoTkQJ.jpg"
+                                src="http://upload.gogouai.com/2016/05/1463042695AoTkQJ.jpg" title="银杏爆鸭掌">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">银杏爆鸭掌</h2>
+                            <p class="txt txtcenter">加热即食</p>
+                            <p class="prices txtcenter">
+                                <em>￥40.00</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_341.html" target="_blank" title="金汤柠檬鱼">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/06/1465889834OOqUNb.jpg"
+                                src="http://upload.gogouai.com/2016/06/1465889834OOqUNb.jpg" title="金汤柠檬鱼">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">金汤柠檬鱼</h2>
+                            <p class="txt txtcenter">皮脆肉嫩 骨肉鲜香</p>
+                            <p class="prices txtcenter">
+                                <em>￥48</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_328.html" target="_blank" title="蒜子烧鲈鱼">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/06/1465890042rpjN3F.jpg"
+                                src="http://upload.gogouai.com/2016/06/1465890042rpjN3F.jpg" title="蒜子烧鲈鱼">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">蒜子烧鲈鱼</h2>
+                            <p class="txt txtcenter">肥肉酥烂，精肉鲜香</p>
+                            <p class="prices txtcenter">
+                                <em>￥32</em>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="goods_323.html" target="_blank" title="萝卜丝鲫鱼汤">
+                            <img class="scrollLoading" data-url="http://upload.gogouai.com/2016/06/1465890113m5jmAD.jpg"
+                                src="http://upload.gogouai.com/2016/06/1465890113m5jmAD.jpg" title="萝卜丝鲫鱼汤">
+                            <h2 style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">萝卜丝鲫鱼汤</h2>
+                            <p class="txt txtcenter">加热即食 食用方便</p>
+                            <p class="prices txtcenter">
+                                <em>￥28</em>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fix-rr">
+        <div id="qqkf" class="sidefixed wb">客服在线</div>
+        <div id="web_div" class="sidefixed wb1" style="display:none">
+            <div class="fixclose weibo" style="display:none"><img src="picture/weibo.png" alt=""></div>
+        </div>
+        <div id="wx_div" class="sidefixed wb2">
+            <div class="fixclose weixin"><img src="picture/weixin.png" alt=""></div>
+        </div>
+        <div id="goTop" class="sidefixed wb3"></div>
+    </div>
+    <div class="foot container">
+        <div class="footerwap">
+            <div class="info">
+                <dl>
+                    <dt><a href="#" target="_blank">购物指南</a></dt>
+                    <dd><a href="#" target="_blank">会员注册协议</a></dd>
+                    <dd><a href="#" target="_blank">会员购物流程</a></dd>
+                    <dd><a href="#" target="_blank">会员积分说明</a></dd>
+                    <dd><a href="#" target="_blank">配送范围及运费</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#" target="_blank">支付帮助</a></dt>
+                    <dd><a href="#" target="_blank">会员卡密码修改</a></dd>
+                    <dd><a href="#" target="_blank">会员卡使用说明</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#" target="_blank">售后服务</a></dt>
+                    <dd><a href="#" target="_blank">货到付款</a></dd>
+                    <dd><a href="#" target="_blank">售后服务</a></dd>
+                    <dd><a href="#" target="_blank">退换货说明</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#" target="_blank">GO购爱信息</a></dt>
+                    <dd><a href="#" target="_blank">会员注册章程</a></dd>
+                    <dd><a href="#" target="_blank">联系客服</a></dd>
+                    <dd><a href="#" target="_blank">关于我们</a></dd>
+                    <dd><a href="#" target="_blank">重大记事</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="#" target="_blank">招贤纳士</a></dt>
+                    <dd><a href="#" target="_blank">市场</a></dd>
+                    <dd><a href="#" target="_blank">产品</a></dd>
+                    <dd><a href="#" target="_blank">线下运营</a></dd>
+                    <dd><a href="#" target="_blank">大客户</a></dd>
+                    <dd><a href="#" target="_blank">供应链</a></dd>
+                    <dd><a href="#" target="_blank">技术</a></dd>
+                    <dd><a href="#" target="_blank">财务</a></dd>
+                </dl>
+            </div>
+            <div class="phone">
+                热线电话：13813869933&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;周一至周日：9:00-17:35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ客服：2036597438
+            </div>
+            <div class="copyright">
+                <a href="#" target="_blank">苏ICP备16020268号-1</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy;
+                2018
+            </div>
+            <div class="copyright">
+
+            </div>
+            <p style="display:none;">Page rendered in <strong>0.1007</strong> seconds</p>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <!-- <script src="js/conment.js"></script> -->
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            //          spaceBetween: 0,
+            spaceBetween: 5,
+            loop: true,
+            loopedSlides: 2,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            }
+        });
+        $(function () {
+            $.ajax({
+                type: "GET",
+                url: "js/goods.json",
+                dataType: "json",
+                success: function (data) {
+                    var str = '';
+                    $.each(data.home, function (i, n) {
+                        str += '<li class="merli">';
+                        str += '<input type= "hidden" class = "bid" value = "' + n.id + '">';
+                        str += '<a>';
+                        str += '<img src="' + n.img + '"/>';
+                        str += '<h2>' + '名称：' + n.name + '</h2>';
+                        str += '<p>' + n.title + '</p>';
+                        str += '<em>' + '价格：' + n.price + '</em>';
+                        str += '</a>';
+                        str += '</li>';
+
+                    });
+                    //console.log(str);
+
+                    $(".right1").append(str);
+                }
+            })
+        });
+        var name = location.href.split("?")[1].split("=")[1];
+        $('.right1').on('click', 'li', function (ev) {
+
+            console.log(name);
+            // this 指向委托的对象 li
+            // var username = location
+            var bid = $(this).children().val();
+            console.log(bid);
+            // 找到父级 .right1
+            $(ev.delegateTarget);
+            $(location).attr("href", " pages/views.html?id=" + bid + "&name=" + name);//发送txt里面的内容
+        })
+
+    </script>
+
+</body>
+
+</html>
